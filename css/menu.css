@@ -5,76 +5,285 @@
 
 .menu-page__hero {
     position: relative;
+
     height: 500px;
+
     background-image: url("../images/menu/menu-hero.jpg");
     background-size: cover;
     background-position: center;
+
+    overflow: hidden;
+
+    animation: menuHeroZoom 12s ease-in-out infinite alternate;
 }
+
+
+/* Overlay */
 
 .menu-page__hero::before {
     content: "";
+
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, .25);
+
+    background-color: rgba(0, 0, 0, 0.25);
 }
+
+
+/* Hero Content */
 
 .menu-page__hero-content {
     position: absolute;
-    left: 80px;
-    top: 55%;
-    bottom: auto;
+
+    left: 5%;
+    top: 50%;
+
     transform: translateY(-50%);
+
     z-index: 1;
 }
 
+
+/* Hero Title */
+
 .menu-page__hero-title {
     margin: 0;
+
     font-family: var(--font-en);
-    font-size: 84px;
-    font-weight: 400;
-    letter-spacing: .08em;
+
+    font-size: 68px;
+    font-weight: 500;
+
+    letter-spacing: 0.08em;
+
+    color: var(--color-text);
 }
 
-.menu-page__content {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 70px 0;
+
+/* Hero Zoom */
+
+@keyframes menuHeroZoom {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.03);
+    }
+
 }
+
+
+
+/* =========================================================
+   MENU CONTENT
+========================================================= */
+
+.menu-page__content {
+    width: 80%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 80px 0 100px;
+}
+
+
+/* =========================================================
+   MENU IMAGE
+========================================================= */
 
 .menu-page__image {
     width: 100%;
-    margin-bottom: 40px;
+
+    margin: 0 auto 50px;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
 }
+
+
+/* 表示状態 */
+
+.menu-page__image.is-visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* 最後の画像 */
 
 .menu-page__image:last-child {
     margin-bottom: 0;
 }
 
+
+/* Image */
+
 .menu-page__image img {
+    display: block;
+
     width: 100%;
     height: auto;
-    display: block;
+
+    transition:
+        transform 0.6s ease;
 }
+
+
+/* Hover */
+
+.menu-page__image:hover img {
+    transform: scale(1.02);
+}
+
+
+
+/* =========================================================
+   ANIMATION DELAY
+========================================================= */
+
+.menu-page__image.js-fade:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.menu-page__image.js-fade:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.menu-page__image.js-fade:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.menu-page__image.js-fade:nth-child(4) {
+    transition-delay: 0.45s;
+}
+
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .menu-page__hero {
+        animation: none;
+    }
+
+    .menu-page__image {
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+    }
+
+    .menu-page__image img {
+        transition: none;
+    }
+
+}
+
+
+
+/* =========================================================
+   SP
+========================================================= */
 
 @media screen and (max-width: 768px) {
 
+
+    /* =====================================================
+       HERO
+    ====================================================== */
+
     .menu-page__hero {
-        height: 600px;
-        background-size: cover;
-        background-position: 80% center;
+        height: 200px;
+
+        background-position: center;
     }
 
+
     .menu-page__hero-content {
-        left: 20px;
-        top: 150px;
-        bottom: auto;
+        left: 25px;
+        right: 20px;
+
+        top: auto;
+        bottom: 30px;
+
         transform: none;
     }
 
+
     .menu-page__hero-title {
-        font-size: 84px;
-        letter-spacing: .06em;
+        font-size: 48px;
+
+        line-height: 1;
+    }
+
+
+
+    /* =====================================================
+       CONTENT
+    ====================================================== */
+
+    .menu-page__content {
+        width: calc(100% - 40px);
+
+        max-width: none;
+
+        padding: 50px 0 70px;
+    }
+
+
+
+    /* =====================================================
+       IMAGES
+    ====================================================== */
+
+    .menu-page__image {
+        width: 100%;
+
+        margin-bottom: 30px;
+
+        transform: translateY(30px);
+    }
+
+
+    .menu-page__image img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* =====================================================
+       SP Animation
+    ====================================================== */
+
+    .menu-page__image.js-fade:nth-child(1) {
+        transition-delay: 0s;
+    }
+
+    .menu-page__image.js-fade:nth-child(2) {
+        transition-delay: 0.12s;
+    }
+
+    .menu-page__image.js-fade:nth-child(3) {
+        transition-delay: 0.24s;
+    }
+
+    .menu-page__image.js-fade:nth-child(4) {
+        transition-delay: 0.36s;
     }
 
 }
