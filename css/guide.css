@@ -1,81 +1,46 @@
-/* =========================================================
-   GUIDE PAGE
-========================================================= */
-
-
-/* =========================================================
-   GUIDE HERO
-========================================================= */
-
 .guide-page__hero {
     position: relative;
     height: 500px;
-
     background-image: url("../images/guide/guide-hero.jpg");
     background-size: cover;
     background-position: center;
-
     overflow: hidden;
-
     animation: guideHeroZoom 12s ease-in-out infinite alternate;
 }
 
-
-/* HERO overlay */
-
 .guide-page__hero::before {
     content: "";
-
     position: absolute;
     inset: 0;
-
     background-color: rgba(0, 0, 0, 0.25);
 
     z-index: 0;
 }
 
-
-/* HERO content */
-
 .guide-page__hero-content {
     position: absolute;
-
     left: 5%;
     top: 50%;
-
     transform: translateY(-50%);
-
     z-index: 1;
 }
 
-
-/* HERO title */
-
 .guide-page__hero-title {
     margin: 0;
-
     font-family: var(--font-en);
-
     font-size: 52px;
     font-weight: 400;
-
     letter-spacing: 0.08em;
-
     color: var(--color-text);
 }
 
-
-/* HERO text */
-
 .guide-page__hero-text {
     margin-top: 30px;
-
     color: var(--color-text);
 }
 
 .guide-page__hero-text p {
     margin: 0;
-
     font-size: 18px;
     line-height: 1.8;
 }
@@ -84,11 +49,7 @@
     margin-top: 8px;
 }
 
-
-/* HERO zoom */
-
 @keyframes guideHeroZoom {
-
     from {
         transform: scale(1);
     }
@@ -99,22 +60,10 @@
 
 }
 
-
-
-/* =========================================================
-   GUIDE PAGE BASE
-========================================================= */
-
 .guide-page {
     background-color: var(--color-bg);
     color: var(--color-text);
 }
-
-
-
-/* =========================================================
-   COMMON
-========================================================= */
 
 .guide-page__section {
     padding: 70px 0;
@@ -124,200 +73,123 @@
 .guide-page__inner {
     width: 90%;
     max-width: 1200px;
-
     margin: 0 auto;
 }
 
 
 .guide-page__number {
     margin: 0;
-
     font-family: var(--font-en);
-
     font-size: 14px;
-
     color: var(--color-gold);
-
     letter-spacing: 0.08em;
 }
 
 
 .guide-page__title {
     margin-top: 8px;
-
     font-size: 26px;
     font-weight: 400;
-
     line-height: 1.5;
 }
-
-
-
-/* =========================================================
-   01
-   シーシャとは？
-========================================================= */
 
 .guide-page__section--01 {
     padding: 70px 0 80px;
 }
 
-
-/* 木目パネル */
-
 .guide-page__panel {
     width: 90%;
     max-width: 1100px;
-
     margin: 0 auto;
-
     padding: 18px;
-
     background-image: url("../images/guide/texture.jpg");
     background-size: cover;
     background-position: center;
-
     color: #5b3218;
-
     box-sizing: border-box;
 }
 
-
-/* heading */
-
 .guide-page__heading {
     display: flex;
-
     align-items: center;
-
     gap: 18px;
-
     padding: 0 8px 12px;
 }
 
 
 .guide-page__section--01 .guide-page__number {
     margin: 0;
-
     font-family: var(--font-en);
-
     font-size: 26px;
-
     color: #5b3218;
 }
 
 
 .guide-page__section--01 .guide-page__title {
     margin: 0;
-
     font-size: 24px;
     font-weight: 400;
-
     color: #5b3218;
 }
 
-
-
-/* =========================================================
-   01 BODY
-========================================================= */
-
 .guide-page__body {
     display: grid;
-
     grid-template-columns: 42% 1fr;
-
     gap: 30px;
-
     align-items: center;
 }
 
-
-/* image */
-
 .guide-page__section--01 .guide-page__image {
     width: 100%;
-
     margin: 0;
 }
 
 
 .guide-page__section--01 .guide-page__image img {
     display: block;
-
     width: 100%;
     height: 300px;
-
     object-fit: cover;
 }
-
-
-
-/* content */
 
 .guide-page__body-content {
     min-width: 0;
 }
 
-
-/* lead */
-
 .guide-page__lead {
     margin: 0;
-
     text-align: left;
-
     font-size: 32px;
     line-height: 1.4;
-
     font-weight: 500;
-
     color: #5b3218;
 }
-
 
 .guide-page__lead span {
     display: inline-block;
 }
 
-
 .guide-page__lead span:first-child {
     margin-left: 0;
 }
-
 
 .guide-page__lead span:last-child {
     margin-left: 120px;
 }
 
-
-
-/* text */
-
 .guide-page__section--01 .guide-page__text {
     margin-top: 24px;
-
     font-size: 15px;
     line-height: 2;
-
     color: #5b3218;
 }
-
 
 .guide-page__section--01 .guide-page__text p {
     margin: 0;
 }
 
-
-
-/* =========================================================
-   02
-   楽しみ方
-========================================================= */
-
 .guide-page__section--enjoy {
     padding: 55px 0 80px;
-
     border-top: 1px solid var(--color-gold);
     border-bottom: 1px solid var(--color-gold);
 }
@@ -326,158 +198,95 @@
 .guide-page__section--enjoy .guide-page__inner {
     width: 90%;
     max-width: 1100px;
-
     margin: 0 auto;
 }
 
-
-
-/* heading */
-
 .guide-page__section--enjoy .guide-page__number {
     display: inline-block;
-
     margin: 0;
-
     font-size: 24px;
-
     color: var(--color-gold);
-
     vertical-align: middle;
 }
 
 
 .guide-page__section--enjoy .guide-page__title {
     display: inline-block;
-
     margin: 0 0 0 15px;
-
     font-size: 24px;
     font-weight: 400;
-
     color: var(--color-gold);
-
     vertical-align: middle;
 }
 
-
-
-/* =========================================================
-   Enjoy Cards
-========================================================= */
-
 .guide-page__cards {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 25px;
-
     margin-top: 35px;
 }
 
 
 .guide-page__card {
     display: grid;
-
     grid-template-columns: 42px 1fr;
     grid-template-rows: 42px auto auto;
-
     width: 100%;
-
     padding: 20px;
-
     box-sizing: border-box;
-
     background-image: url("../images/guide/texture.jpg");
     background-size: cover;
     background-position: center;
-
     color: #5b3218;
-
     transition:
         transform 0.4s ease,
         box-shadow 0.4s ease;
 }
 
-
-/* hover */
-
 .guide-page__card:hover {
     transform: translateY(-6px);
 }
 
-
-
-/* number */
-
 .guide-page__card-number {
     grid-column: 1;
     grid-row: 1;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     width: 34px;
     height: 34px;
-
     margin: 0;
-
     border-radius: 50%;
-
     background-color: #5b3218;
-
     font-family: var(--font-en);
-
     font-size: 13px;
-
     color: #f4eadc;
 }
-
-
-
-/* title */
 
 .guide-page__card h3 {
     grid-column: 2;
     grid-row: 1;
-
     align-self: center;
-
     margin: 0 0 0 10px;
-
     font-size: 18px;
     font-weight: 400;
-
     line-height: 1.5;
-
     color: #5b3218;
 }
-
-
-
-/* image */
 
 .guide-page__card-image {
     grid-column: 1 / -1;
     grid-row: 2;
-
     margin-top: 15px;
-
     overflow: hidden;
 }
 
 
 .guide-page__card-image img {
     display: block;
-
     width: 100%;
     height: 180px;
-
     object-fit: cover;
-
     transition: transform 0.5s ease;
 }
 
@@ -486,115 +295,67 @@
     transform: scale(1.05);
 }
 
-
-
-/* description */
-
 .guide-page__card>p:last-child {
     grid-column: 1 / -1;
     grid-row: 3;
-
     margin: 20px 0 0;
-
     font-size: 14px;
     line-height: 1.8;
-
     color: #5b3218;
 }
-
-
-
-/* =========================================================
-   03
-   シーシャの吸い方
-========================================================= */
 
 .guide-page__howto {
     padding: 80px 0 100px;
 }
 
-
-/* heading */
-
 .guide-page__howto .guide-page__section-title {
     margin: 0;
-
     color: var(--color-gold);
-
     font-size: 30px;
     font-weight: 400;
-
     line-height: 1.5;
 }
 
 
 .guide-page__howto .guide-page__section-title span {
     margin-right: 18px;
-
     font-family: var(--font-en);
-
     font-size: 24px;
 }
 
-
-
-/* =========================================================
-   Steps
-========================================================= */
-
 .guide-page__steps {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 35px;
-
     margin-top: 55px;
 }
 
 
 .guide-page__step {
     padding: 0 10px;
-
-    text-align: center;
+    text-align: left;
 }
 
 
 .guide-page__step h3 {
     margin: 0;
-
     color: var(--color-text);
-
     font-size: 18px;
     font-weight: 400;
-
     line-height: 1.6;
 }
 
 
 .guide-page__step p {
     margin: 35px 0 0;
-
     color: var(--color-sub-text);
-
     font-size: 14px;
-
     line-height: 2;
 }
 
-
-
-/* =========================================================
-   SCROLL ANIMATION
-========================================================= */
-
-/* 下から */
-
 .guide-page .js-fade {
     opacity: 0;
-
     transform: translateY(50px);
-
     transition:
         opacity 1s ease,
         transform 1s ease;
@@ -603,18 +364,12 @@
 
 .guide-page .js-fade.is-visible {
     opacity: 1;
-
     transform: translateY(0);
 }
 
-
-/* 左から */
-
 .guide-page .js-fade-left {
     opacity: 0;
-
     transform: translateX(-50px);
-
     transition:
         opacity 1s ease,
         transform 1s ease;
@@ -623,55 +378,33 @@
 
 .guide-page .js-fade-left.is-visible {
     opacity: 1;
-
     transform: translateX(0);
 }
 
-
-/* 右から */
-
 .guide-page .js-fade-right {
     opacity: 0;
-
     transform: translateX(50px);
-
     transition:
         opacity 1s ease,
         transform 1s ease;
 }
 
-
 .guide-page .js-fade-right.is-visible {
     opacity: 1;
-
     transform: translateX(0);
 }
-
-
-
-/* =========================================================
-   CARD DELAY
-========================================================= */
 
 .guide-page__card.js-fade:nth-child(1) {
     transition-delay: 0s;
 }
 
-
 .guide-page__card.js-fade:nth-child(2) {
     transition-delay: 0.15s;
 }
 
-
 .guide-page__card.js-fade:nth-child(3) {
     transition-delay: 0.3s;
 }
-
-
-
-/* =========================================================
-   STEP DELAY
-========================================================= */
 
 .guide-page__step.js-fade-left {
     transition-delay: 0s;
@@ -682,16 +415,9 @@
     transition-delay: 0.15s;
 }
 
-
 .guide-page__step.js-fade-right {
     transition-delay: 0.3s;
 }
-
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -703,9 +429,7 @@
     .guide-page .js-fade-left,
     .guide-page .js-fade-right {
         opacity: 1;
-
         transform: none;
-
         transition: none;
     }
 
@@ -713,46 +437,27 @@
     .guide-page__card-image img {
         transition: none;
     }
-
 }
-
-
-
-/* =========================================================
-   SP
-========================================================= */
 
 @media screen and (max-width: 768px) {
 
-
-    /* =====================================================
-       HERO
-    ====================================================== */
-
     .guide-page__hero {
         height: 400px;
-
         background-position: center center;
     }
-
 
     .guide-page__hero-content {
         left: 25px;
         right: 20px;
         top: auto;
         bottom: 30px;
-
         transform: none;
     }
 
-
     .guide-page__hero-title {
         margin: 0 0 18px;
-
         font-size: 48px;
-
         line-height: 1;
-
         color: var(--color-text);
     }
 
@@ -764,15 +469,8 @@
 
     .guide-page__hero-text p {
         font-size: 17px;
-
         line-height: 1.8;
     }
-
-
-
-    /* =====================================================
-       COMMON
-    ====================================================== */
 
     .guide-page__section {
         padding: 50px 0;
@@ -781,29 +479,18 @@
 
     .guide-page__inner {
         width: calc(100% - 40px);
-
         max-width: none;
     }
-
-
-
-    /* =====================================================
-       01
-    ====================================================== */
 
     .guide-page__section--01 {
         padding: 45px 0 55px;
     }
 
-
     .guide-page__panel {
         width: calc(100% - 40px);
-
         padding: 16px;
-
         box-sizing: border-box;
     }
-
 
     .guide-page__heading {
         gap: 12px;
@@ -811,11 +498,9 @@
         padding: 0 4px 15px;
     }
 
-
     .guide-page__section--01 .guide-page__number {
         font-size: 22px;
     }
-
 
     .guide-page__section--01 .guide-page__title {
         font-size: 23px;
@@ -823,247 +508,159 @@
         line-height: 1.5;
     }
 
-
-    /* body */
-
     .guide-page__body {
         display: block;
     }
 
-
-    /* image */
-
     .guide-page__section--01 .guide-page__image {
         width: 100%;
-
         margin: 0;
     }
-
 
     .guide-page__section--01 .guide-page__image img {
         width: 100%;
         height: auto;
-
         aspect-ratio: 16 / 10;
-
         object-fit: cover;
     }
 
-
-    /* lead */
-
     .guide-page__lead {
         margin: 28px 0 20px;
-
         text-align: center;
-
         font-size: 29px;
-
         line-height: 1.5;
     }
-
 
     .guide-page__lead span:first-child {
         margin-left: 0;
     }
-
 
     .guide-page__lead span:last-child {
         margin-left: 0;
     }
 
 
-    /* text */
-
     .guide-page__section--01 .guide-page__text {
         margin: 0;
-
         font-size: 14px;
-
         line-height: 1.9;
     }
-
-
-
-    /* =====================================================
-       02
-    ====================================================== */
 
     .guide-page__section--enjoy {
         padding: 45px 0 60px;
     }
 
-
     .guide-page__section--enjoy .guide-page__inner {
         width: 100%;
     }
-
 
     .guide-page__section--enjoy .guide-page__inner>div:first-child {
         padding: 0 20px;
     }
 
-
     .guide-page__section--enjoy .guide-page__number {
         font-size: 22px;
     }
 
-
     .guide-page__section--enjoy .guide-page__title {
         margin-left: 10px;
-
         font-size: 23px;
     }
 
-
-    /* cards */
-
     .guide-page__cards {
         display: flex;
-
         flex-direction: column;
-
         gap: 35px;
-
         margin-top: 30px;
-
         padding: 0 20px;
     }
 
-
     .guide-page__card {
         display: grid;
-
         grid-template-columns: 48px 1fr;
         grid-template-rows: auto auto auto;
-
         padding: 18px;
     }
-
 
     .guide-page__card-number {
         width: 40px;
         height: 40px;
-
         font-size: 13px;
     }
 
-
     .guide-page__card h3 {
         margin-left: 8px;
-
         font-size: 19px;
-
         line-height: 1.5;
     }
-
 
     .guide-page__card-image {
         margin-top: 15px;
     }
 
-
     .guide-page__card-image img {
         width: 100%;
         height: auto;
-
         aspect-ratio: 16 / 8;
-
         object-fit: cover;
     }
 
-
     .guide-page__card>p:last-child {
         margin-top: 18px;
-
         font-size: 14px;
-
         line-height: 1.8;
     }
-
-
-
-    /* =====================================================
-       03
-    ====================================================== */
 
     .guide-page__howto {
         padding: 55px 20px 70px;
     }
 
-
     .guide-page__howto .guide-page__section-title {
         font-size: 24px;
-
         line-height: 1.5;
     }
 
-
     .guide-page__howto .guide-page__section-title span {
         margin-right: 12px;
-
         font-size: 20px;
     }
 
-
-    /* steps */
-
     .guide-page__steps {
         display: flex;
-
         flex-direction: column;
-
         gap: 0;
-
         margin-top: 40px;
     }
 
-
     .guide-page__step {
         padding: 0;
-
         text-align: left;
     }
-
 
     .guide-page__step+.guide-page__step {
         margin-top: 50px;
     }
 
-
     .guide-page__step h3 {
         font-size: 18px;
-
         line-height: 1.6;
     }
 
-
     .guide-page__step p {
         margin: 20px 0 0;
-
         font-size: 12px;
-
         line-height: 1.9;
     }
-
-
-
-    /* =====================================================
-       SP animation
-    ====================================================== */
 
     .guide-page .js-fade {
         transform: translateY(30px);
     }
 
-
     .guide-page .js-fade-left {
         transform: translateX(-30px);
     }
 
-
     .guide-page .js-fade-right {
         transform: translateX(30px);
     }
-
 }

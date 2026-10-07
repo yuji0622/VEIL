@@ -5,17 +5,14 @@
     --color-gold: #b87932;
     --color-text: #f4eadc;
     --color-sub-text: #c8b8a6;
-
     --font-jp: "Noto Serif JP", serif;
     --font-en: "Cinzel", serif;
-
     --content-width: 1200px;
 }
 
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
-
     font-family: var(--font-jp);
 }
 

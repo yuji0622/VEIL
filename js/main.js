@@ -1,23 +1,7 @@
-/* =========================================================
-   VEIL
-   SHISHA CAFE & BAR
-   main.js
-========================================================= */
-
-
-/* =========================================================
-   GALLERY MODAL
-========================================================= */
-
 const galleryModal = document.getElementById("galleryModal");
 const galleryMore = document.querySelector(".gallery__more");
 const galleryClose = document.querySelector(".gallery-modal__close");
 const galleryOverlay = document.querySelector(".gallery-modal__overlay");
-
-
-/* =========================================================
-   VIEW MORE
-========================================================= */
 
 if (galleryMore && galleryModal) {
 
@@ -31,11 +15,6 @@ if (galleryMore && galleryModal) {
 
 }
 
-
-/* =========================================================
-   GALLERY MODAL CLOSE
-========================================================= */
-
 function closeGalleryModal() {
 
     if (!galleryModal) {
@@ -47,7 +26,6 @@ function closeGalleryModal() {
     document.body.style.overflow = "";
 
 }
-
 
 /* 閉じるボタン */
 
@@ -91,18 +69,9 @@ document.addEventListener("keydown", (event) => {
 
 });
 
-
-/* =========================================================
-   SP MENU
-========================================================= */
-
 const hamburger = document.querySelector(".hamburger");
 const spMenu = document.querySelector(".sp-menu");
 
-
-/* =========================================================
-   HAMBURGER OPEN / CLOSE
-========================================================= */
 
 if (hamburger && spMenu) {
 
@@ -113,11 +82,6 @@ if (hamburger && spMenu) {
         spMenu.classList.toggle("is-open");
 
     });
-
-
-    /* =====================================================
-       メニュー外側をクリック
-    ===================================================== */
 
     document.addEventListener("click", (event) => {
 
@@ -132,11 +96,6 @@ if (hamburger && spMenu) {
         }
 
     });
-
-
-    /* =====================================================
-       メニュー項目をクリック
-    ===================================================== */
 
     const spMenuLinks =
         document.querySelectorAll(".sp-menu__nav a");
@@ -154,11 +113,6 @@ if (hamburger && spMenu) {
 
 }
 
-
-/* =========================================================
-   GALLERY SLIDER
-========================================================= */
-
 const galleryList =
     document.querySelector(".gallery__list");
 
@@ -175,11 +129,6 @@ if (
     galleryNext
 ) {
 
-
-    /* =====================================================
-       NEXT
-    ===================================================== */
-
     galleryNext.addEventListener("click", () => {
 
         galleryList.scrollBy({
@@ -191,12 +140,6 @@ if (
         });
 
     });
-
-
-    /* =====================================================
-       PREV
-    ===================================================== */
-
     galleryPrev.addEventListener("click", () => {
 
         galleryList.scrollBy({
@@ -210,12 +153,6 @@ if (
     });
 
 }
-
-
-/* =========================================================
-   SCROLL ANIMATION
-========================================================= */
-
 const fadeElements =
     document.querySelectorAll(
         ".js-fade, .js-fade-left, .js-fade-right"
@@ -236,8 +173,6 @@ if ("IntersectionObserver" in window) {
                         );
 
 
-                        /* 一度表示したら監視を解除 */
-
                         fadeObserver.unobserve(
                             entry.target
                         );
@@ -251,10 +186,6 @@ if ("IntersectionObserver" in window) {
                 threshold: 0.15
             }
         );
-
-
-    /* アニメーション対象を監視 */
-
     fadeElements.forEach((element) => {
 
         fadeObserver.observe(element);
@@ -264,9 +195,6 @@ if ("IntersectionObserver" in window) {
 
 } else {
 
-    /* =====================================================
-       IntersectionObserver非対応ブラウザ用
-    ===================================================== */
 
     fadeElements.forEach((element) => {
 
@@ -275,12 +203,6 @@ if ("IntersectionObserver" in window) {
     });
 
 }
-
-
-/* =========================================================
-   SP MENU
-   ESCキーでも閉じる
-========================================================= */
 
 document.addEventListener("keydown", (event) => {
 

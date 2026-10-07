@@ -1,39 +1,19 @@
-/* =========================================================
-   VEIL
-   SHISHA CAFE & BAR
-   style.css
-========================================================= */
-
-
-/* =========================================================
-   Variables
-========================================================= */
-
 :root {
     --color-bg: #2b1c14;
     --color-bg-dark: #1c130f;
     --color-brown: #6b2f08;
     --color-gold: #b87932;
-
     --color-text: #f4eadc;
     --color-sub-text: #c9b8a4;
     --color-white: #f2ede6;
-
     --font-serif: "Noto Serif JP", serif;
     --font-jp: "Noto Serif JP", serif;
     --font-en: "Cinzel", serif;
-
     --content-width: 1200px;
-
     --transition-fast: 0.3s ease;
     --transition-normal: 0.6s ease;
     --transition-slow: 1s ease;
 }
-
-
-/* =========================================================
-   Reset
-========================================================= */
 
 * {
     margin: 0;
@@ -70,11 +50,6 @@ section {
     scroll-margin-top: 80px;
 }
 
-
-/* =========================================================
-   HERO
-========================================================= */
-
 .hero {
     position: relative;
 
@@ -90,9 +65,6 @@ section {
         heroZoom 12s ease-in-out infinite alternate;
 }
 
-
-/* HERO ゆっくりズーム */
-
 @keyframes heroZoom {
 
     from {
@@ -104,38 +76,22 @@ section {
     }
 }
 
-
-/* HERO 暗幕 */
-
 .hero::before {
     content: "";
-
     position: absolute;
     inset: 0;
-
     background-color: rgba(0, 0, 0, 0.25);
-
     z-index: 0;
 }
 
-
-/* HERO CONTENT */
-
 .hero__content {
     position: absolute;
-
     top: 50%;
     right: 8%;
-
     transform: translateY(-50%);
-
     text-align: right;
-
     z-index: 2;
 }
-
-
-/* キャッチコピー */
 
 .hero__catch {
     font-family: var(--font-jp);
@@ -146,9 +102,6 @@ section {
 
     color: var(--color-white);
 }
-
-
-/* 英字タイトル */
 
 .hero__sub {
     margin-top: 20px;
@@ -161,104 +114,38 @@ section {
     color: var(--color-white);
 }
 
-
-/* =========================================================
-   HERO SMOKE
-========================================================= */
-
 .hero__smoke {
     position: absolute;
-
     left: 25%;
     bottom: 15%;
-
     width: 180px;
-
     z-index: 1;
-
     pointer-events: none;
-
     opacity: 0.4;
 }
 
 .hero__smoke img {
     width: 100%;
     height: auto;
-
     display: block;
-
-    animation:
-        smokeFloat 6s ease-in-out infinite;
+    animation: smokeFloat 6s ease-in-out infinite;
 }
-
-
-/* 煙がゆっくり上昇 */
-
-@keyframes smokeFloat {
-
-    0% {
-        opacity: 0;
-
-        transform:
-            translateY(20px) translateX(0) scale(0.9);
-    }
-
-    25% {
-        opacity: 0.35;
-    }
-
-    50% {
-        opacity: 0.45;
-
-        transform:
-            translateY(-25px) translateX(10px) scale(1);
-    }
-
-    75% {
-        opacity: 0.25;
-
-        transform:
-            translateY(-55px) translateX(-5px) scale(1.05);
-    }
-
-    100% {
-        opacity: 0;
-
-        transform:
-            translateY(-90px) translateX(8px) scale(1.1);
-    }
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
 
 .header {
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 100;
-
     background-color: rgba(0, 0, 0, 0.45);
-
-    border-bottom:
-        1px solid rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
 }
 
 .header__inner {
     width: min(var(--content-width), 90%);
-
     margin: 0 auto;
-
     padding: 10px 0;
-
     display: flex;
-
     align-items: center;
 }
 
@@ -270,122 +157,67 @@ section {
     width: 100%;
 }
 
-
-/* =========================================================
-   PC NAVIGATION
-========================================================= */
-
 .nav {
     position: absolute;
-
     left: 50%;
-
     transform: translateX(-50%);
 }
 
 .nav__list {
     display: flex;
-
     align-items: center;
-
     gap: 28px;
 }
 
 .nav__list a {
     font-family: var(--font-en);
-
     font-size: 16px;
-
     letter-spacing: 0.08em;
-
     color: var(--color-white);
-
-    transition:
-        color var(--transition-fast);
+    transition: color var(--transition-fast);
 }
 
 .nav__list a:hover {
     color: var(--color-gold);
 }
 
-
-/* =========================================================
-   RESERVE BUTTON
-========================================================= */
-
 .reserve-button {
     position: absolute;
-
     right: 90px;
-
     padding: 10px 22px;
-
-    border:
-        1px solid var(--color-gold);
-
+    border: 1px solid var(--color-gold);
     color: #fff;
-
     font-family: var(--font-jp);
-
     font-size: 13px;
-
-    transition:
-        background-color var(--transition-fast),
-        color var(--transition-fast);
+    transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 .reserve-button:hover {
     background-color: var(--color-gold);
-
     color: #fff;
 }
 
-
-/* =========================================================
-   COMMON SECTION TITLE
-========================================================= */
-
 .section-label {
     margin-bottom: 28px;
-
     font-family: var(--font-en);
-
     font-size: 64px;
-
     font-weight: 400;
-
     line-height: 1;
-
     letter-spacing: 0.08em;
-
     color: var(--color-text);
 }
 
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
 .about {
     padding: 16px 0;
-
-    background-color:
-        var(--color-bg);
+    background-color: var(--color-bg);
 }
 
 .about__inner {
-    width:
-        min(var(--content-width), 90%);
-
+    width: min(var(--content-width), 90%);
     margin: 0 auto;
-
     display: grid;
-
-    grid-template-columns:
-        0.8fr 1.2fr;
-
+    grid-template-columns: 0.8fr 1.2fr;
     gap: 40px;
-
     align-items: center;
 }
 
@@ -395,13 +227,9 @@ section {
 
 .about__title {
     margin-bottom: 30px;
-
     font-family: var(--font-jp);
-
     font-size: 32px;
-
     font-weight: 400;
-
     line-height: 1.8;
 }
 
@@ -411,69 +239,46 @@ section {
 
 .about__text {
     font-size: 16px;
-
     line-height: 2;
-
-    color:
-        var(--color-sub-text);
+    color: var(--color-sub-text);
 }
 
 .about__image {
     position: relative;
-
     overflow: hidden;
 }
 
 .about__image img {
     width: 100%;
-
     height: 450px;
-
     object-fit: cover;
 }
 
-
-/* =========================================================
-   FEATURE
-========================================================= */
-
 .feature {
     padding: 60px 0;
-
-    background-color:
-        var(--color-bg-dark);
+    background-color: var(--color-bg-dark);
 }
 
 .feature__inner {
-    width:
-        min(var(--content-width), 90%);
-
+    width: min(var(--content-width), 90%);
     margin: 0 auto;
 }
 
 .feature .section-label {
     margin-bottom: 30px;
-
     font-size: 64px;
-
     letter-spacing: 0.05em;
 }
 
 .feature__list {
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
 
 .feature__item {
-    border:
-        1px solid rgba(184, 121, 50, 0.5);
-
-    background-color:
-        #2b1b13;
+    border: 1px solid rgba(184, 121, 50, 0.5);
+    background-color: #2b1b13;
 }
 
 .feature__image {
@@ -482,178 +287,103 @@ section {
 
 .feature__image img {
     width: 100%;
-
     height: 190px;
-
     object-fit: cover;
-
-    transition:
-        transform 0.4s ease;
+    transition: transform 0.4s ease;
 }
 
 .feature__item:hover .feature__image img {
     transform: scale(1.05);
 }
 
-
-/* FEATURE BODY */
-
 .feature__body {
     position: relative;
-
     height: 180px;
-
-    padding:
-        18px 16px 20px;
-
+    padding: 18px 16px 20px;
     overflow: hidden;
 }
 
-
-/* テクスチャ */
-
 .feature__body::before {
     content: "";
-
     position: absolute;
-
     inset: 0;
-
-    background-image:
-        url("../images/common/texture.png");
-
+    background-image: url("../images/common/texture.png");
     background-size: cover;
-
     background-position: center;
-
     opacity: 0.3;
-
     z-index: 0;
-
     pointer-events: none;
 }
 
-
-/* FEATURE TITLE */
-
 .feature__title {
     position: relative;
-
     z-index: 1;
-
     margin: 0;
-
-    font-family:
-        var(--font-jp);
-
+    font-family: var(--font-jp);
     font-size: 20px;
-
     font-weight: 400;
-
     line-height: 1.6;
-
-    color:
-        var(--color-text);
+    color: var(--color-text);
 }
 
 .feature__title span {
     color: var(--color-gold);
 }
 
-
-/* FEATURE TEXT */
-
 .feature__text {
     position: relative;
-
     z-index: 1;
-
     margin-top: 10px;
-
     font-size: 16px;
-
     line-height: 1.8;
-
-    color:
-        var(--color-sub-text);
+    color: var(--color-sub-text);
 }
-
-
-/* =========================================================
-   MENU
-========================================================= */
 
 .menu {
     padding: 60px 0;
-
-    background-color:
-        var(--color-bg);
+    background-color: var(--color-bg);
 }
 
 .menu__inner {
-    width:
-        min(var(--content-width), 90%);
-
+    width: min(var(--content-width), 90%);
     margin: 0 auto;
 }
 
 .menu__heading {
     display: flex;
-
     align-items: end;
-
     justify-content: space-between;
-
     margin-bottom: 35px;
 }
 
 .menu__category {
     margin-top: 8px;
-
     font-size: 32px;
-
-    color:
-        var(--color-sub-text);
+    color: var(--color-sub-text);
 }
 
 .menu__button {
-    padding:
-        15px 90px;
-
-    border:
-        1px solid var(--color-gold);
-
-    font-family:
-        var(--font-en);
-
+    padding: 15px 90px;
+    border: 1px solid var(--color-gold);
+    font-family: var(--font-en);
     font-size: 16px;
-
     letter-spacing: 0.08em;
-
-    transition:
-        background-color var(--transition-fast);
+    transition: background-color var(--transition-fast);
 }
 
 .menu__button:hover {
-    background-color:
-        var(--color-gold);
+    background-color: var(--color-gold);
 }
 
 .menu__list {
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
 .menu__item {
-    border:
-        1px solid rgba(184, 121, 50, 0.7);
-
-    background-color:
-        #2b1b13;
+    border: 1px solid rgba(184, 121, 50, 0.7);
+    background-color: #2b1b13;
 }
 
 .menu__image {
@@ -662,138 +392,83 @@ section {
 
 .menu__image img {
     width: 100%;
-
     height: 220px;
-
     object-fit: cover;
-
-    transition:
-        transform 0.4s ease;
+    transition: transform 0.4s ease;
 }
 
 .menu__item:hover .menu__image img {
     transform: scale(1.05);
 }
 
-
-/* MENU INFO */
-
 .menu__info {
     position: relative;
-
     min-height: 120px;
-
     padding: 20px 16px;
-
     overflow: hidden;
 }
 
 .menu__info::before {
     content: "";
-
     position: absolute;
-
     inset: 0;
-
-    background-image:
-        url("../images/common/texture.png");
-
+    background-image: url("../images/common/texture.png");
     background-size: cover;
-
     background-position: center;
-
     opacity: 0.3;
-
     z-index: 0;
-
     pointer-events: none;
 }
 
 .menu__info-top {
     position: relative;
-
     z-index: 1;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 }
 
 .menu__info h3 {
-    font-family:
-        var(--font-en);
-
+    font-family: var(--font-en);
     font-size: 24px;
-
     font-weight: 400;
-
     letter-spacing: 0.08em;
 }
 
 .menu__info p {
     position: relative;
-
     z-index: 1;
-
     margin-top: 4px;
-
     font-size: 16px;
-
-    color:
-        var(--color-sub-text);
+    color: var(--color-sub-text);
 }
 
 .menu__info span {
     display: block;
-
     margin-top: 0;
-
-    font-family:
-        var(--font-en);
-
+    font-family: var(--font-en);
     font-size: 24px;
-
-    color:
-        var(--color-gold);
+    color: var(--color-gold);
 }
-
-
-/* =========================================================
-   GUIDE
-========================================================= */
 
 .guide {
     padding: 60px 0;
-
-    background-color:
-        var(--color-bg-dark);
+    background-color: var(--color-bg-dark);
 }
 
 .guide__inner {
-    width:
-        min(var(--content-width), 90%);
-
+    width: min(var(--content-width), 90%);
     margin: 0 auto;
-
     display: grid;
-
-    grid-template-columns:
-        0.8fr 1.3fr 0.8fr;
-
+    grid-template-columns: 0.8fr 1.3fr 0.8fr;
     gap: 32px;
-
     align-items: center;
 }
 
 .guide .section-label {
     grid-column: 1 / -1;
-
     margin-bottom: 0;
-
     font-size: 64px;
-
     letter-spacing: 0.05em;
 }
 
@@ -803,13 +478,9 @@ section {
 
 .guide__image img {
     width: 100%;
-
     height: 400px;
-
     object-fit: cover;
-
-    transition:
-        transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 .guide__image:hover img {
@@ -822,82 +493,48 @@ section {
 
 .guide__title {
     margin-top: 25px;
-
-    font-family:
-        var(--font-jp);
-
+    font-family: var(--font-jp);
     font-size: 28px;
-
     font-weight: 400;
-
     line-height: 1.8;
-
-    color:
-        var(--color-gold);
+    color: var(--color-gold);
 }
 
 .guide__text {
     margin-top: 25px;
-
     font-size: 14px;
-
     line-height: 2;
-
-    color:
-        var(--color-sub-text);
+    color: var(--color-sub-text);
 }
 
 .guide__button {
     display: inline-block;
-
     margin-top: 30px;
-
-    padding:
-        12px 30px;
-
-    border:
-        1px solid var(--color-gold);
-
+    padding: 12px 30px;
+    border: 1px solid var(--color-gold);
     font-size: 12px;
-
-    transition:
-        background-color var(--transition-fast);
+    transition: background-color var(--transition-fast);
 }
 
 .guide__button:hover {
-    background-color:
-        var(--color-gold);
+    background-color: var(--color-gold);
 }
 
 .guide__menu {
-    border:
-        1px solid var(--color-gold);
+    border: 1px solid var(--color-gold);
 
-    background-color:
-        rgba(35, 19, 11, 0.8);
+    background-color: rgba(35, 19, 11, 0.8);
 }
 
 .guide__menu a {
     display: block;
-
-    padding:
-        18px 15px;
-
+    padding: 18px 15px;
     text-align: center;
-
-    font-family:
-        var(--font-jp);
-
+    font-family: var(--font-jp);
     font-size: 13px;
-
-    color:
-        var(--color-text);
-
-    border-bottom:
-        1px solid var(--color-gold);
-
-    transition:
-        background-color var(--transition-fast);
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-gold);
+    transition: background-color var(--transition-fast);
 }
 
 .guide__menu a:last-child {
@@ -905,79 +542,46 @@ section {
 }
 
 .guide__menu a:hover {
-    background-color:
-        rgba(184, 121, 50, 0.15);
+    background-color: rgba(184, 121, 50, 0.15);
 }
-
-
-/* =========================================================
-   GALLERY
-========================================================= */
 
 .gallery {
     padding: 80px 0;
-
-    background-color:
-        var(--color-bg);
+    background-color: var(--color-bg);
 }
 
 .gallery__inner {
-    width:
-        min(var(--content-width), 90%);
-
+    width: min(var(--content-width), 90%);
     margin: 0 auto;
 }
 
 .gallery__heading {
     margin-bottom: 35px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 }
 
 .gallery__more {
-    padding:
-        15px 90px;
+    padding: 15px 90px;
+    border: 1px solid var(--color-gold);
 
-    border:
-        1px solid var(--color-gold);
-
-    background-color:
-        transparent;
-
-    color:
-        var(--color-text);
-
-    font-family:
-        var(--font-en);
-
+    background-color: transparent;
+    color: var(--color-text);
+    font-family: var(--font-en);
     font-size: 13px;
-
     letter-spacing: 0.08em;
-
     cursor: pointer;
-
-    transition:
-        background-color var(--transition-fast);
+    transition: background-color var(--transition-fast);
 }
 
 .gallery__more:hover {
-    background-color:
-        var(--color-gold);
+    background-color: var(--color-gold);
 }
-
-
-/* Gallery Preview */
 
 .gallery__list {
     display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
 }
 
@@ -987,13 +591,9 @@ section {
 
 .gallery__item img {
     width: 100%;
-
     height: 270px;
-
     object-fit: cover;
-
-    transition:
-        transform 0.4s ease;
+    transition: transform 0.4s ease;
 }
 
 .gallery__item:hover img {
@@ -1004,26 +604,13 @@ section {
     display: none;
 }
 
-
-/* =========================================================
-   GALLERY MODAL
-========================================================= */
-
 .gallery-modal {
     position: fixed;
-
     inset: 0;
-
     z-index: 999;
-
     display: none;
-
-    padding:
-        60px 20px;
-
-    background-color:
-        rgba(15, 9, 6, 0.96);
-
+    padding: 60px 20px;
+    background-color: rgba(15, 9, 6, 0.96);
     overflow-y: auto;
 }
 
@@ -1033,55 +620,34 @@ section {
 
 .gallery-modal__content {
     position: relative;
-
-    width:
-        min(1100px, 100%);
-
+    width: min(1100px, 100%);
     margin: 0 auto;
 }
 
 .gallery-modal__close {
     position: fixed;
-
     top: 25px;
     right: 35px;
-
     width: 45px;
     height: 45px;
-
-    border:
-        1px solid var(--color-gold);
-
-    background-color:
-        #21150f;
-
-    color:
-        var(--color-text);
-
+    border: 1px solid var(--color-gold);
+    background-color: #21150f;
+    color: var(--color-text);
     font-size: 28px;
-
     line-height: 1;
-
     cursor: pointer;
 }
 
 .gallery-modal__title {
     margin-bottom: 35px;
-
-    font-family:
-        var(--font-en);
-
+    font-family: var(--font-en);
     font-size: 36px;
-
     letter-spacing: 0.08em;
 }
 
 .gallery-modal__list {
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -1091,37 +657,21 @@ section {
 
 .gallery-modal__item img {
     width: 100%;
-
     height: 280px;
-
     object-fit: cover;
 }
 
-
-/* =========================================================
-   ACCESS
-========================================================= */
-
 .access {
     padding: 80px 0;
-
-    background-color:
-        var(--color-bg-dark);
+    background-color: var(--color-bg-dark);
 }
 
 .access__inner {
-    width:
-        min(var(--content-width), 90%);
-
+    width: min(var(--content-width), 90%);
     margin: 0 auto;
-
     display: grid;
-
-    grid-template-columns:
-        1fr 1.2fr 0.8fr;
-
+    grid-template-columns: 1fr 1.2fr 0.8fr;
     gap: 30px;
-
     align-items: center;
 }
 
@@ -1131,53 +681,34 @@ section {
 
 .access__title {
     margin-top: 25px;
-
-    font-family:
-        var(--font-en);
-
+    font-family: var(--font-en);
     font-size: 20px;
-
     font-weight: 400;
-
     letter-spacing: 0.08em;
 }
 
 .access__info {
     margin-top: 25px;
-
     font-size: 13px;
-
     line-height: 2;
-
-    color:
-        var(--color-sub-text);
+    color: var(--color-sub-text);
 }
 
 .access__info p+p {
     margin-top: 15px;
 }
 
-
-/* MAP */
-
 .access__map {
     width: 100%;
-
     height: 280px;
 }
 
 .access__map iframe {
     width: 100%;
-
     height: 100%;
-
     display: block;
-
     border: 0;
 }
-
-
-/* ACCESS IMAGE */
 
 .access__image {
     overflow: hidden;
@@ -1185,45 +716,26 @@ section {
 
 .access__image img {
     width: 100%;
-
     height: 280px;
-
     object-fit: cover;
-
-    transition:
-        transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 .access__image:hover img {
     transform: scale(1.03);
 }
 
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
 .footer {
-    padding:
-        40px 0 30px;
-
-    background-color:
-        #17100c;
-
-    border-top:
-        1px solid rgba(184, 121, 50, 0.3);
+    padding: 40px 0 30px;
+    background-color: #17100c;
+    border-top: 1px solid rgba(184, 121, 50, 0.3);
 }
 
 .footer__inner {
-    width:
-        min(1100px, 90%);
-
+    width: min(1100px, 90%);
     margin: 0 auto;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 }
 
@@ -1233,175 +745,96 @@ section {
 
 .footer__logo p {
     margin-top: 15px;
-
-    font-family:
-        var(--font-en);
-
+    font-family: var(--font-en);
     font-size: 11px;
-
     letter-spacing: 0.12em;
-
-    color:
-        var(--color-sub-text);
+    color: var(--color-sub-text);
 }
 
 .footer__nav ul {
     display: flex;
-
     gap: 30px;
 }
 
 .footer__nav a {
-    font-family:
-        var(--font-en);
-
+    font-family: var(--font-en);
     font-size: 16px;
-
     letter-spacing: 0.08em;
-
-    color:
-        var(--color-text);
-
-    transition:
-        color var(--transition-fast);
+    color: var(--color-text);
+    transition: color var(--transition-fast);
 }
 
 .footer__nav a:hover {
-    color:
-        var(--color-gold);
+    color: var(--color-gold);
 }
 
 .footer__bottom {
-    width:
-        min(1100px, 90%);
-
-    margin:
-        30px auto 0;
-
+    width: min(1100px, 90%);
+    margin: 30px auto 0;
     padding-top: 15px;
-
-    border-top:
-        1px solid rgba(184, 121, 50, 0.2);
-
+    border-top: 1px solid rgba(184, 121, 50, 0.2);
     text-align: center;
 }
 
 .footer__bottom p {
-    font-family:
-        var(--font-en);
-
+    font-family: var(--font-en);
     font-size: 16px;
-
     letter-spacing: 0.08em;
-
-    color:
-        var(--color-sub-text);
+    color: var(--color-sub-text);
 }
 
 .footer__sns {
     display: flex;
-
     align-items: center;
-
     gap: 24px;
 }
 
 .footer__sns a {
-    color:
-        var(--color-text);
-
+    color: var(--color-text);
     font-size: 26px;
-
-    transition:
-        color var(--transition-fast);
+    transition: color var(--transition-fast);
 }
 
 .footer__sns a:hover {
-    color:
-        var(--color-gold);
+    color: var(--color-gold);
 }
-
-
-/* =========================================================
-   SP MENU
-========================================================= */
 
 .sp-menu {
     display: none;
 }
 
-
-/* =========================================================
-   SCROLL ANIMATION
-========================================================= */
-
-
-/* 下から */
-
 .js-fade {
     opacity: 0;
-
-    transform:
-        translateY(50px);
-
-    transition:
-        opacity 1s ease,
-        transform 1s ease;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .js-fade.is-visible {
     opacity: 1;
-
-    transform:
-        translateY(0);
+    transform: translateY(0);
 }
-
-
-/* 左から */
 
 .js-fade-left {
     opacity: 0;
-
-    transform:
-        translateX(-50px);
-
-    transition:
-        opacity 1s ease,
-        transform 1s ease;
+    transform: translateX(-50px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .js-fade-left.is-visible {
     opacity: 1;
-
-    transform:
-        translateX(0);
+    transform: translateX(0);
 }
-
-
-/* 右から */
 
 .js-fade-right {
     opacity: 0;
-
-    transform:
-        translateX(50px);
-
-    transition:
-        opacity 1s ease,
-        transform 1s ease;
+    transform: translateX(50px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .js-fade-right.is-visible {
     opacity: 1;
-
-    transform:
-        translateX(0);
+    transform: translateX(0);
 }
-
-
-/* =========================================================
-   SCROLL ANIMATION DELAY
-========================================================= */
 
 .feature__item.js-fade:nth-child(1),
 .menu__item.js-fade:nth-child(1) {
@@ -1435,17 +868,7 @@ section {
     transition-delay: 0.36s;
 }
 
-
-/* =========================================================
-   SP
-========================================================= */
-
 @media screen and (max-width: 768px) {
-
-
-    /* =====================================================
-       HEADER
-    ===================================================== */
 
     .header__logo {
         width: 80px;
@@ -1463,196 +886,109 @@ section {
         display: none !important;
     }
 
-
-    /* =====================================================
-       HAMBURGER
-    ===================================================== */
-
     .hamburger {
         position: absolute;
-
         top: 18px;
         right: 20px;
-
         display: flex;
-
         width: 42px;
         height: 42px;
-
         padding: 8px 5px;
-
         flex-direction: column;
-
         justify-content: center;
-
         gap: 6px;
-
         border: none;
-
         background: transparent;
-
         cursor: pointer;
-
         z-index: 110;
     }
 
     .hamburger span {
         display: block;
-
         width: 100%;
         height: 2px;
-
-        background-color:
-            var(--color-white);
+        background-color: var(--color-white);
     }
-
-
-    /* =====================================================
-       SP MENU
-    ===================================================== */
 
     .sp-menu {
         position: fixed;
-
         top: 0;
         right: 0;
-
         width: 50%;
         height: 100vh;
-
-        padding:
-            100px 30px 40px;
-
+        padding: 100px 30px 40px;
         display: flex;
-
         flex-direction: column;
-
         align-items: center;
-
-        background-color:
-            rgba(28, 19, 15, 0.98);
-
+        background-color: rgba(28, 19, 15, 0.98);
         z-index: 105;
-
-        transform:
-            translateX(100%);
-
+        transform: translateX(100%);
         opacity: 0;
-
-        transition:
-            transform 0.4s ease,
-            opacity 0.4s ease;
-
+        transition: transform 0.4s ease, opacity 0.4s ease;
         pointer-events: none;
     }
 
     .sp-menu.is-open {
-        transform:
-            translateX(0);
-
+        transform: translateX(0);
         opacity: 1;
-
         pointer-events: auto;
     }
 
     .sp-menu__nav {
         display: flex;
-
         flex-direction: column;
-
         align-items: center;
-
         gap: 28px;
     }
 
     .sp-menu__nav a {
-        font-family:
-            var(--font-en);
-
+        font-family: var(--font-en);
         font-size: 18px;
-
         letter-spacing: 0.08em;
     }
 
-
-    /* =====================================================
-       SP RESERVE
-    ===================================================== */
-
     .sp-menu__reserve {
         position: relative;
-
         width: 180px;
         min-width: 180px;
-
         margin-top: 40px;
-
-        padding:
-            12px 10px;
-
-        border:
-            1px solid var(--color-gold);
-
+        padding: 12px 10px;
+        border: 1px solid var(--color-gold);
         color: #fff;
-
-        font-family:
-            var(--font-jp);
-
+        font-family: var(--font-jp);
         font-size: 13px;
-
         letter-spacing: 0.05em;
-
         display: flex;
-
         align-items: center;
-
         justify-content: center;
-
         gap: 4px;
-
         white-space: nowrap;
-
         box-sizing: border-box;
-
-        transition:
-            background-color var(--transition-fast);
+        transition: background-color var(--transition-fast);
     }
 
     .sp-menu__reserve span {
         flex-shrink: 0;
-
         white-space: nowrap;
     }
 
     .sp-menu__reserve::before {
         content: "";
-
         position: absolute;
-
         top: 4px;
         right: 4px;
         bottom: 4px;
         left: 4px;
-
-        border:
-            1px solid var(--color-gold);
-
+        border: 1px solid var(--color-gold);
         pointer-events: none;
     }
 
     .sp-menu__reserve:hover {
-        background-color:
-            var(--color-gold);
+        background-color: var(--color-gold);
     }
-
-
-    /* =====================================================
-       HERO
-    ===================================================== */
 
     .hero {
         min-height: 580px;
-
         background-position: center;
     }
 
@@ -1660,59 +996,36 @@ section {
         top: 50%;
         left: 50%;
         right: auto;
-
         width: 90%;
-
-        transform:
-            translate(-50%, -50%);
-
+        transform: translate(-50%, -50%);
         text-align: center;
     }
 
     .hero__catch {
         font-size: 42px;
-
         line-height: 1.8;
     }
 
     .hero__sub {
         margin-top: 18px;
-
         font-size: 24px;
-
         letter-spacing: 0.1em;
     }
 
-
-    /* =====================================================
-       COMMON SECTION TITLE
-    ===================================================== */
-
     .section-label {
         font-size: 42px;
-
         line-height: 1;
-
         letter-spacing: 0.05em;
     }
 
-
-    /* =====================================================
-       ABOUT
-    ===================================================== */
-
     .about {
-        padding:
-            45px 0 70px;
+        padding: 45px 0 70px;
     }
 
     .about__inner {
         width: 100%;
-
         display: flex;
-
         flex-direction: column;
-
         gap: 0;
     }
 
@@ -1722,201 +1035,138 @@ section {
 
     .about .section-label {
         order: 1;
-
         width: 90%;
-
-        margin:
-            0 auto 55px;
-
+        margin: 0 auto 55px;
         font-size: 42px;
-
         text-align: left;
     }
 
     .about__title {
         order: 2;
-
         width: 80%;
-
-        margin:
-            0 auto 28px;
-
+        margin: 0 auto 28px;
         font-size: 30px;
-
         line-height: 1.8;
-
         text-align: left;
     }
 
     .about__title span {
         display: inline-block;
-
         margin-left: 35px;
     }
 
     .about__image {
         order: 3;
-
         width: 90%;
-
-        margin:
-            0 auto 65px;
+        margin: 0 auto 65px;
     }
 
     .about__image img {
         width: 100%;
-
         height: 225px;
-
         object-fit: cover;
     }
 
     .about__text {
         order: 4;
-
         width: 86%;
-
-        margin:
-            0 auto;
-
+        margin: 0 auto;
         font-size: 18px;
-
         line-height: 1.85;
-
         text-align: center;
     }
 
-
-    /* =====================================================
-       FEATURE
-    ===================================================== */
-
     .feature {
-        padding:
-            55px 0 70px;
+        padding: 55px 0 70px;
     }
 
     .feature__inner {
         width: 90%;
-
         margin: 0 auto;
     }
 
     .feature .section-label {
         margin-bottom: 40px;
-
         font-size: 44px;
-
         text-align: left;
     }
 
     .feature__list {
         display: flex;
-
         flex-direction: column;
-
         gap: 50px;
     }
 
     .feature__item {
         display: flex;
-
         width: 100%;
-
         min-height: 125px;
     }
 
     .feature__image {
         width: 38%;
-
         flex-shrink: 0;
     }
 
     .feature__image img {
         width: 100%;
-
         height: 120px;
-
         object-fit: cover;
     }
 
     .feature__body {
         width: 62%;
-
         height: 120px;
-
         min-height: 0;
-
-        padding:
-            12px 15px;
+        padding: 12px 15px;
     }
 
     .feature__title {
         font-size: 17px;
-
         line-height: 1.5;
     }
 
     .feature__text {
         margin-top: 6px;
-
         font-size: 12px;
-
         line-height: 1.6;
     }
 
-
-    /* =====================================================
-       MENU
-    ===================================================== */
-
     .menu {
-        padding:
-            50px 0 60px;
+        padding: 50px 0 60px;
     }
 
     .menu__inner {
         width: 90%;
-
         margin: 0 auto;
     }
 
     .menu__heading {
         display: block;
-
         margin-bottom: 30px;
     }
 
     .menu .section-label {
         margin-bottom: 15px;
-
         font-size: 42px;
-
         text-align: left;
     }
 
     .menu__category {
         margin-top: 0;
-
         font-size: 22px;
     }
 
     .menu__button {
         display: inline-block;
-
         margin-top: 20px;
-
-        padding:
-            12px 45px;
-
+        padding: 12px 45px;
         font-size: 16px;
     }
 
     .menu__list {
         display: flex;
-
         flex-direction: column;
-
         gap: 30px;
     }
 
@@ -1926,17 +1176,13 @@ section {
 
     .menu__image img {
         width: 100%;
-
         height: 220px;
-
         object-fit: cover;
     }
 
     .menu__info {
         min-height: 150px;
-
-        padding:
-            22px 20px 24px;
+        padding: 22px 20px 24px;
     }
 
     .menu__info-top {
@@ -1954,239 +1200,144 @@ section {
 
     .menu__info p {
         margin-top: 5px;
-
         padding-left: 25px;
-
         font-size: 14px;
     }
 
-
-    /* =====================================================
-       GUIDE
-    ===================================================== */
-
     .guide {
-        padding:
-            50px 0 70px;
-
+        padding: 50px 0 70px;
         overflow: hidden;
     }
 
     .guide__inner {
         width: 90%;
-
         margin: 0 auto;
-
         display: grid;
-
-        grid-template-columns:
-            40% minmax(0, 1fr);
-
+        grid-template-columns: 40% minmax(0, 1fr);
         column-gap: 20px;
-
         row-gap: 0;
-
         align-items: start;
     }
 
     .guide .section-label {
-        grid-column:
-            1 / -1;
-
-        margin:
-            0 0 30px;
-
+        grid-column: 1 / -1;
+        margin: 0 0 30px;
         font-size: 42px;
-
         text-align: left;
     }
 
     .guide__image {
         width: 100%;
-
         min-width: 0;
     }
 
     .guide__image img {
         width: 100%;
-
         height: 320px;
-
         object-fit: cover;
     }
 
     .guide__content {
         width: 100%;
-
         min-width: 0;
-
         padding: 0;
     }
 
     .guide__title {
         margin: 0;
-
         font-size: 23px;
-
         line-height: 1.7;
-
-        color:
-            var(--color-text);
+        color: var(--color-text);
     }
 
     .guide__text {
         margin-top: 25px;
-
         font-size: 14px;
-
         line-height: 1.8;
-
-        color:
-            var(--color-text);
-
-        overflow-wrap:
-            break-word;
+        color: var(--color-text);
+        overflow-wrap: break-word;
     }
 
     .guide__button {
-        grid-column:
-            1 / -1;
-
-        justify-self:
-            center;
-
+        grid-column: 1 / -1;
+        justify-self: center;
         display: block;
-
         width: 75%;
-
         max-width: 360px;
-
-        margin:
-            20px auto 0;
-
-        padding:
-            10px 15px;
-
+        margin: 20px auto 0;
+        padding: 10px 15px;
         text-align: center;
-
         font-size: 20px;
-
         white-space: nowrap;
     }
 
     .guide__menu {
-        grid-column:
-            1 / -1;
-
+        grid-column: 1 / -1;
         width: 85%;
-
-        margin:
-            25px auto 0;
+        margin: 25px auto 0;
     }
 
     .guide__menu a {
         position: relative;
-
         display: block;
-
-        padding:
-            27px 15px;
-
+        padding: 27px 15px;
         text-align: center;
-
         font-size: 23px;
-
         border-bottom: none;
     }
 
     .guide__menu a:not(:last-child)::after {
         content: "";
-
         position: absolute;
-
         left: 8%;
         right: 8%;
         bottom: 0;
-
         height: 1px;
-
-        background-color:
-            var(--color-gold);
+        background-color: var(--color-gold);
     }
 
-
-    /* =====================================================
-       GALLERY
-    ===================================================== */
-
     .gallery {
-        padding:
-            50px 0 60px;
-
+        padding: 50px 0 60px;
         overflow: hidden;
     }
 
     .gallery__inner {
         width: 100%;
-
         margin: 0 auto;
     }
 
     .gallery__heading {
         width: 90%;
-
-        margin:
-            0 auto 35px;
-
+        margin: 0 auto 35px;
         display: flex;
-
         align-items: center;
-
         justify-content: space-between;
     }
 
     .gallery .section-label {
         margin: 0;
-
         font-size: 42px;
     }
 
     .gallery__more {
-        padding:
-            12px 25px;
-
+        padding: 12px 25px;
         font-size: 13px;
-
         white-space: nowrap;
     }
 
-
-    /* =====================================================
-       GALLERY SLIDER
-    ===================================================== */
-
     .gallery__slider {
         position: relative;
-
         width: 100%;
     }
 
     .gallery__list {
         display: flex;
-
         gap: 18px;
-
         width: 100%;
-
         overflow-x: auto;
-
-        padding:
-            0 10%;
-
+        padding: 0 10%;
         scroll-behavior: smooth;
-
         scrollbar-width: none;
-
         -ms-overflow-style: none;
     }
 
@@ -2196,58 +1347,33 @@ section {
 
     .gallery__item {
         width: 280px;
-
         flex:
             0 0 280px;
     }
 
     .gallery__item img {
         width: 100%;
-
         height: 320px;
-
         object-fit: cover;
     }
 
 
-    /* =====================================================
-       GALLERY ARROWS
-    ===================================================== */
-
     .gallery__arrow {
         position: absolute;
-
         top: 50%;
-
-        transform:
-            translateY(-50%);
-
+        transform: translateY(-50%);
         z-index: 5;
-
         width: 42px;
         height: 42px;
-
-        border:
-            1px solid var(--color-gold);
-
+        border: 1px solid var(--color-gold);
         border-radius: 50%;
-
-        background:
-            rgba(28, 19, 15, 0.95);
-
-        color:
-            var(--color-text);
-
+        background: rgba(28, 19, 15, 0.95);
+        color: var(--color-text);
         display: flex;
-
         align-items: center;
-
         justify-content: center;
-
         cursor: pointer;
-
-        transition:
-            background-color var(--transition-fast);
+        transition: background-color var(--transition-fast);
     }
 
     .gallery__arrow--prev {
@@ -2259,69 +1385,46 @@ section {
     }
 
     .gallery__arrow:hover {
-        background:
-            var(--color-gold);
-
+        background: var(--color-gold);
         color: #fff;
     }
 
-
-    /* =====================================================
-       ACCESS
-    ===================================================== */
-
     .access {
-        padding:
-            50px 0 70px;
+        padding: 50px 0 70px;
     }
 
     .access__inner {
         width: 90%;
-
         margin: 0 auto;
-
         display: flex;
-
         flex-direction: column;
-
         align-items: center;
-
         gap: 0;
     }
 
     .access .section-label {
         width: 100%;
-
         margin-bottom: 55px;
-
         font-size: 42px;
-
         text-align: left;
     }
 
     .access__content {
         width: 100%;
-
         padding: 0;
-
         text-align: center;
     }
 
     .access__title {
         margin-top: 0;
-
         font-size: 24px;
     }
 
     .access__info {
         margin-top: 45px;
-
         font-size: 16px;
-
         line-height: 2;
-
-        color:
-            var(--color-text);
+        color: var(--color-text);
     }
 
     .access__info p+p {
@@ -2330,48 +1433,31 @@ section {
 
     .access__map {
         width: 90%;
-
         height: 250px;
-
         margin-top: 70px;
     }
 
     .access__image {
         width: 90%;
-
         margin-top: 85px;
     }
 
     .access__image img {
         width: 100%;
-
         height: 250px;
-
         object-fit: cover;
     }
 
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
     .footer {
-        padding:
-            35px 0 40px;
-
-        border-top:
-            1px solid var(--color-gold);
+        padding: 35px 0 40px;
+        border-top: 1px solid var(--color-gold);
     }
 
     .footer__inner {
         width: 90%;
-
         margin: 0 auto;
-
         display: flex;
-
         flex-direction: column;
-
         align-items: center;
     }
 
@@ -2393,11 +1479,8 @@ section {
 
     .footer__nav ul {
         display: flex;
-
         flex-wrap: wrap;
-
         justify-content: center;
-
         gap: 15px;
     }
 
@@ -2407,20 +1490,12 @@ section {
 
     .footer__sns {
         width: 80%;
-
         margin-top: 18px;
-
         padding-top: 12px;
-
-        border-top:
-            1px solid var(--color-gold);
-
+        border-top: 1px solid var(--color-gold);
         display: flex;
-
         justify-content: space-around;
-
         align-items: center;
-
         gap: 0;
     }
 
@@ -2428,32 +1503,19 @@ section {
         font-size: 34px;
     }
 
-
-    /* =====================================================
-       SP SCROLL ANIMATION
-    ===================================================== */
-
     .js-fade {
-        transform:
-            translateY(30px);
+        transform: translateY(30px);
     }
 
     .js-fade-left {
-        transform:
-            translateX(-30px);
+        transform: translateX(-30px);
     }
 
     .js-fade-right {
-        transform:
-            translateX(30px);
+        transform: translateX(30px);
     }
 
 }
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -2464,13 +1526,8 @@ section {
     *,
     *::before,
     *::after {
-        animation-duration:
-            0.01ms !important;
-
-        animation-iteration-count:
-            1 !important;
-
-        transition-duration:
-            0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
