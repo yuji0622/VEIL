@@ -463,16 +463,24 @@ section {
 .menu__item {
     border: 1px solid rgba(184, 121, 50, 0.7);
     background-color: #2b1b13;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column
 }
 
 .menu__image {
+    width: 100%;
+    height: 200px;
     overflow: hidden;
+    position: relative;
 }
 
 .menu__image img {
     width: 100%;
-    height: 120px;
+    height: 100%;
     object-fit: cover;
+    object-position: center;
+    display: block;
     transition: tr ansform 0.4s ease;
 }
 
@@ -486,10 +494,6 @@ section {
     object-fit: cover;
     object-position: center 30%;
 
-}
-
-.menu__item:hover .menu__image img {
-    transform: scale(1.05);
 }
 
 .menu__info {
@@ -1141,7 +1145,6 @@ section {
         font-size: 1.5rem;
         margin-bottom: 30px;
     }
-
 
     .feature {
         padding: 55px 0 70px;
